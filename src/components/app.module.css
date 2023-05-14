@@ -1,0 +1,36 @@
+.phoneBook {
+  margin: 0 auto;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  height: auto;
+  border: 1px solid #777;
+  
+}
+
+.phoneBook-title {
+  font-size: 70px;
+  font-weight: 900;
+}
+
+.phoneBook-wrap {
+  margin: 0 auto 20px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  height: auto;
+  border: 1px solid #777;
+  background-color: gray;
+}
+
+.title {
+  margin: 0 auto;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+

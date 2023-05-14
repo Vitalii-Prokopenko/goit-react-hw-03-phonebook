@@ -1,0 +1,25 @@
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+
+.btnDelete {
+    margin-left: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    border-radius: 10px;
+  }
+  
+  .btnDelete:hover,
+  .btnDelete:focus {
+    background-color: crimson;
+    color: white;
+  }
+  
