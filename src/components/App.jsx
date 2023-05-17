@@ -16,6 +16,21 @@ class App extends Component {
     filter: '',
   };
 
+  componentDidUpdate(prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
+  componentDidMount() {
+    // localStorage/clear();
+    const storedContacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(storedContacts);
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
+    }
+  }
+
   handleInputFilter = event => {
     const { name, value } = event.currentTarget;
     this.setState({
@@ -49,22 +64,6 @@ class App extends Component {
       };
     });
   };
-
-  componentDidUpdate(prevState) {
-    if (this.state.contacts !== prevState.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-    }
-  }
-
-  componentDidMount() { 
-    // localStorage/clear();   
-    const storedContacts = localStorage.getItem('contacts');
-    const parsedContacts = JSON.parse(storedContacts);
-    if (parsedContacts) {
-      this.setState({contacts: parsedContacts});
-    }
-
-  }
 
   render() {
     const { contacts, filter } = this.state;
